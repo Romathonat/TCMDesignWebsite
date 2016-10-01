@@ -1,0 +1,552 @@
+/**
+* Copyright 2015 Google Inc. All Rights Reserved.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+body {
+    margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+    border: 0px;
+}
+
+::-moz-selection {
+    background-color: #6ab344;
+    color: #fff;
+}
+
+::selection {
+    background-color: #6ab344;
+    color: #fff;
+}
+
+.citizenGO-search-box .mdl-textfield__input {
+    color: rgb(242,242,242));
+}
+
+.search-icon{
+    color: rgb(242,242,242) !important;
+}
+
+.citizenGO-header .mdl-menu__container {
+    z-index: 50;
+    margin: 0 !important;
+}
+
+.citizenGO-header-logo{
+    width: 45px !important; /* you can use % */
+    height: auto;
+}
+
+.mdl-textfield--expandable {
+    width: auto;
+}
+
+.citizenGO-fab {
+    position: absolute;
+    right: 20%;
+    bottom: -26px;
+    z-index: 3;
+    background: #64ffda !important;
+    color: black !important;
+}
+
+.citizenGO-mobile-title {
+    display: none !important;
+}
+
+
+.citizenGO-logo-image {
+    height: 28px;
+    width: 140px;
+}
+
+
+.citizenGO-header {
+    overflow: visible;
+    background-color: rgb(196,33,39);
+}
+
+.citizenGO-header .material-icons {
+    color: #767777 !important;
+}
+
+.citizenGO-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+}
+
+.citizenGO-header .mdl-navigation__link {
+    color: rgb(242,242,242);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.citizenGO-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.citizenGO-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.citizenGO-search-box.is-focused + .citizenGO-navigation-container {
+    opacity: 0;
+    width: 100px;
+}
+
+
+.citizenGO-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.citizenGO-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid rgb(242,242,242);
+}
+
+.citizenGO-search-box {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.citizenGO-more-button {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+
+.citizenGO-drawer {
+    border-right: none;
+}
+
+.citizenGO-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+}
+
+.citizenGO-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+}
+
+.citizenGO-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+}
+
+.citizenGO-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+}
+
+.citizenGO-drawer .citizenGO-logo-image {
+    position: absolute;
+    bottom: 16px;
+}
+
+.citizenGO-be-together-section {
+    position: relative;
+    height: 400px;
+    width: auto;
+    background: url('./images/city.jpg') center 100% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+}
+
+.logo-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1;
+    color: #767777;
+    font-weight: 500;
+}
+
+.citizenGO-slogan {
+    font-size: 60px;
+    color: rgb(0,0,0);
+    opacity: 1.5;
+    padding-top: 160px;
+}
+
+.citizenGO-sub-slogan {
+    font-size: 21px;
+    padding-top: 24px;
+}
+
+.citizenGO-create-character {
+    font-size: 21px;
+    padding-top: 400px;
+}
+
+.citizenGO-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+}
+
+.citizenGO-screen-section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.citizenGO-screens {
+    text-align: right;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.citizenGO-screen {
+    text-align: center;
+}
+
+.citizenGO-screen .citizenGO-link {
+    margin-top: 16px;
+    display: block;
+    z-index: 2;
+}
+
+.citizenGO-image-link {
+    text-decoration: none;
+}
+
+.citizenGO-wear {
+    display: inline-block;
+    width: 160px;
+    margin-right: 32px;
+}
+
+.citizenGO-wear .citizenGO-screen-image {
+    width: 40%;
+    z-index: 1;
+}
+
+
+.citizenGO-phone {
+    display: inline-block;
+    width: 64px;
+    margin-right: 48px;
+}
+
+.citizenGO-phone .citizenGO-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+
+.citizenGO-tablet {
+    display: inline-block;
+    width: 110px;
+    margin-right: 64px;
+}
+
+.citizenGO-tablet .citizenGO-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.citizenGO-tablet .citizenGO-link {
+    display: block;
+    z-index: 2;
+}
+
+
+.citizenGO-tv {
+    display: inline-block;
+    width: 300px;
+    margin-right: 80px;
+}
+
+.citizenGO-tv .citizenGO-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+
+.citizenGO-auto {
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+}
+
+.citizenGO-auto .citizenGO-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+}
+
+
+.citizenGO-wear-section {
+    position: relative;
+    background: url('images/wear.png') center top no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.citizenGO-wear-band {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #37474f;
+}
+
+.citizenGO-wear-band-text {
+    max-width: 800px;
+    margin-left: 25%;
+    padding: 24px;
+    text-align: left;
+    color: white;
+}
+
+.citizenGO-wear-band-text p {
+    padding-top: 8px;
+}
+
+.citizenGO-link {
+    text-decoration: none;
+    color: #8bc34a !important;
+}
+
+.citizenGO-link:hover {
+    color: #7cb342 !important;
+}
+
+.citizenGO-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.citizenGO-alt-link {
+    text-decoration: none;
+    color: #64ffda !important;
+    font-size: 16px;
+}
+
+.citizenGO-alt-link:hover {
+    color: #00bfa5 !important;
+}
+
+.citizenGO-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.citizenGO-customized-section {
+    text-align: center;
+}
+
+.citizenGO-customized-section-text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 16px 0 16px;
+}
+
+.citizenGO-customized-section-text p {
+    padding-top: 16px;
+}
+
+.citizenGO-customized-section-image {
+    background: url('images/devices.jpg') center top no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.citizenGO-more-section {
+    padding: 80px 0;
+    max-width: 1044px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.citizenGO-more-section .citizenGO-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+}
+
+.citizenGO-card-container {
+}
+
+.citizenGO-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+}
+
+.citizenGO-card-container .mdl-card__media img {
+    width: 100%;
+}
+
+.citizenGO-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+}
+
+.citizenGO-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+}
+
+.citizenGO-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+}
+
+.citizenGO-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+}
+
+.citizenGO-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+}
+
+.citizenGO-footer {
+    background-color: #fafafa;
+    position: relative;
+}
+
+.citizenGO-footer a:hover {
+    color: #8bc34a;
+}
+
+.citizenGO-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+}
+
+.citizenGO-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+}
+
+.citizenGO-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+}
+
+.citizenGO-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+}
+
+.citizenGO-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+
+.citizenGO-link-menu:hover {
+    cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+    .citizenGO-navigation-container {
+        display: none;
+    }
+
+    .citizenGO-title {
+        display: none !important;
+    }
+
+    .citizenGO-mobile-title {
+        display: block !important;
+        position: absolute;
+        left: calc(50% - 70px);
+        top: 12px;
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+    consecutive "+" operators in some cases. Therefore, we need to use both
+    here to cover all the bases. */
+    .citizenGO.citizenGO-search-box.is-focused ~ .citizenGO-mobile-title,
+    .citizenGO-search-box.is-focused + .citizenGO-navigation-container + .citizenGO-mobile-title {
+        opacity: 0;
+    }
+
+    .citizenGO-more-button {
+        display: none;
+    }
+
+    .citizenGO-search-box.is-focused {
+        width: calc(100% - 48px);
+    }
+
+    .citizenGO-search-box .mdl-textfield__expandable-holder {
+        width: 100%;
+    }
+
+    .citizenGO-be-together-section {
+        height: 350px;
+    }
+
+    .citizenGO-slogan {
+        font-size: 26px;
+        margin: 0 16px;
+        padding-top: 24px;
+    }
+
+    .citizenGO-sub-slogan {
+        font-size: 16px;
+        margin: 0 16px;
+        padding-top: 8px;
+    }
+
+    .citizenGO-create-character {
+        padding-top: 200px;
+        font-size: 16px;
+    }
+
+    .citizenGO-create-character img {
+        height: 12px;
+    }
+
+    .citizenGO-fab {
+        display: none;
+    }
+
+    .citizenGO-wear-band-text {
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .citizenGO-footer .mdl-mega-footer--bottom-section {
+        display: none;
+    }
+}

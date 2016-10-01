@@ -1,0 +1,20 @@
+Identité visuelle
+
+Objet d'étude: Citizen Go
+Domaine de communication: produit, B2B, sponsor
+Valeurs fortes: Modernité, dynamisme, citoyenneté, implication pour un meilleur monde
+Cible: Sponsors, les villes (clients potentiels), les utilisateurs (personnes connectés, voir personas)
+
+________________
+Charte graphique
+
+Polices: Open-sans
+
+Couleurs: 196 33 39 (rouge un peu foncé) : dynamisme, couleur chaude, rassurante
+	  255 255 255 (blanc): sombre classe
+	  242 242 242 (gris très pâle): pour faire une transition du rouge ver le noir ou le blanc (adoucir)
+	  0 0 0(noir): pour bien lire, va bien aevc le rouge
+	  
+Logo: Lion rouge. Rappel la couleur, animal mascotte, image de noblesse. Le lion est le roi des animaux, il est au top, 
+comme le but de notre app, etre au top du classement citoyen.
+
