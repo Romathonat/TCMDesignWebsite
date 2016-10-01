@@ -201,6 +201,32 @@ a img{
     padding-top: 160px;
 }
 
+.citizenGO-explanation-section{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.citizenGO-explanation-section > .mdl-card__title{
+    color: rgb(242,242,242);
+    font-size: 200%;
+    background: url('./images/cityNight.jpg') center / cover;
+}
+
+.citizenGO-comment-jouer-section{
+    width: 800px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.citizenGO-comment-jouer-section > .mdl-card__title{
+    color: rgb(242,242,242);
+    font-size: 200%;
+    background: url('./images/skyscrapers.jpg') center / cover;
+}
+
 .citizenGO-sub-slogan {
     font-size: 21px;
     padding-top: 24px;
