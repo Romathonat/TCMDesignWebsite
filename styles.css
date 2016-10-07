@@ -23,6 +23,11 @@ a img{
     border: 0px;
 }
 
+a{
+    color: red;
+    text-decoration: none;
+}
+
 ::-moz-selection {
     background-color: #6ab344;
     color: #fff;
@@ -203,6 +208,7 @@ a img{
 
 .citizenGO-explanation-section{
     width: 800px;
+    margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
 
@@ -451,7 +457,6 @@ a img{
 .citizenGO-card-container .mdl-card__supporting-text {
     height: auto;
     color: black;
-    padding-bottom: 56px;
 }
 
 .citizenGO-card-container .mdl-card__actions {
