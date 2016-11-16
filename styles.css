@@ -200,10 +200,17 @@ a{
 }
 
 .citizenGO-slogan {
-    font-size: 60px;
-    color: rgb(0,0,0);
-    opacity: 1.5;
     padding-top: 160px;
+    text-transform: uppercase;
+}
+
+.slogan-text{
+    font-size: 60px;
+    color: rgb(30,30,30);
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .citizenGO-explanation-section{
@@ -454,6 +461,10 @@ a{
     height: auto;
 }
 
+.mdl-card__title-text{
+    font-weight: 700;
+}
+
 .citizenGO-card-container .mdl-card__supporting-text {
     height: auto;
     color: black;
@@ -580,4 +591,17 @@ a{
     .citizenGO-footer .mdl-mega-footer--bottom-section {
         display: none;
     }
+}
+
+.center-div{
+    text-align: center;
+    margin: auto;
+}
+.center-div a{
+    color: grey;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.center-div a:hover{
+    color: white;
 }
