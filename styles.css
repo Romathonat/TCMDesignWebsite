@@ -597,11 +597,17 @@ a{
     text-align: center;
     margin: auto;
 }
+
 .center-div a{
     color: grey;
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .center-div a:hover{
     color: white;
+}
+
+.right-footer{
+    display: inline-block;
 }
