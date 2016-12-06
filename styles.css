@@ -611,3 +611,10 @@ a{
 .right-footer{
     display: inline-block;
 }
+
+.video{
+    margin: auto;
+    width: 560px;
+    height: 315px;
+    padding: 20px;
+}
