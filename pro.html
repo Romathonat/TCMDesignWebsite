@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Citizen GO.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Citizen GO</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./material/material.min.css">
+    <link rel="stylesheet" href="odometer-theme-default.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+    }
+    </style>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <div class="citizenGO-header mdl-layout__header mdl-layout__header--waterfall">
+
+            <div class="mdl-layout__header-row">
+                <img class="citizenGO-header-logo" src="./images/citizenGO-logo.png" />
+                <span class="citizenGO-title mdl-layout-title">
+                    <h3>Citizen GO</h3>
+                </span>
+                <!-- Add spacer, to align navigation to the right in desktop -->
+                <div class="citizenGO-header-spacer mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <div class="citizenGO-navigation-container">
+                    <nav class="citizenGO-navigation mdl-navigation">
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="home.html">Concept</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="pro.html">Pour les villes</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="citizenGO-content mdl-layout__content">
+
+            <div class="citizenGO-comment-jouer-section mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Les statistiques en direct</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <table>
+                        <tr>
+                            <td>Nombre de bonnes actions :</td>
+                            <td class="dynamic-number odometer" id="ba">10000</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre de réductions distribuées :</td>
+                            <td class="dynamic-number odometer" id="reduc">10000</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre d'utilisateurs actuellement dans les transports en commun :</td>
+                            <td class="dynamic-number odometer" id="tc">10000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="citizenGO-explanation-section mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Nos utilisateurs</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <canvas id="utilisateurs" width="400" height="400"></canvas>
+                </div>
+            </div>
+
+            <div class="contact">
+                <p>
+                    Vous êtes un ville et vous souhaitez adopter CitizenGO ?
+                </p>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent contact">
+                    Contactez-nous !
+                </button>
+            </div>
+
+            <footer class="mdl-mini-footer">
+                <div class="center-div">
+                    <a href="https://www.facebook.com/profile.php?id=100014005789383"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/realcitizengo"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <a href="mailto:realcitizengo@gmail.com"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="right-footer">
+                    © 2016 CitizenGo
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="odometer.min.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById("utilisateurs");
+        var data = {
+            labels: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+            datasets: [
+                {
+                    label: "Nombre d'utilisateurs de CitizenGO",
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(196, 33, 39, 0.3)",
+                    borderColor: "rgb(196, 33, 39)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgb(196, 33, 39)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgb(196, 33, 39)",
+                    pointHoverBorderColor: "rgb(196, 33, 39)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [20087,
+                        30049,
+                        35090,
+                        38212,
+                        43107,
+                        51027,
+                        52135,
+                        65331,
+                        77596,
+                        89098,
+                        97910,
+                        114174],
+                    spanGaps: false,
+                }
+            ]
+        };
+        var scatterChart = new Chart(ctx, {
+            type: 'line',
+            data: data
+        });
+
+        var html_ba = document.getElementById("ba");
+        var html_reduc = document.getElementById("reduc");
+        var html_tc = document.getElementById("tc");
+
+        var ba = 32152;
+        var reduc = 14025;
+        var tc = 585;
+
+        html_ba.innerHTML = ba;
+        html_reduc.innerHTML = reduc;
+        html_tc.innerHTML = tc;
+
+        setInterval(function(){
+            ba += Math.floor((Math.random() * 15) + 1);
+            reduc += Math.floor((Math.random() * 3) + 1);
+            tc += Math.floor(((Math.random()-0.5) * 20) + 1);
+            html_ba.innerHTML = ba;
+            html_reduc.innerHTML = reduc;
+            html_tc.innerHTML = tc;
+        }, 4000)
+
+    </script>
+</body>
+</html>
